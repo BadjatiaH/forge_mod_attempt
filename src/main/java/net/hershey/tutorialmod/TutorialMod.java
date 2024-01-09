@@ -1,6 +1,7 @@
 package net.hershey.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.hershey.tutorialmod.block.ModBlocks;
 import net.hershey.tutorialmod.item.ModCreativeModeTabs;
 import net.hershey.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,6 +35,8 @@ public class TutorialMod
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in
